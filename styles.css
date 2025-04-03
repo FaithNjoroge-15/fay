@@ -1,209 +1,325 @@
-body{
-    font-family: Montserrat;
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    color: goldenrod;
+}
+
+/* Navbar */
+header {
+    background-color: #003366;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9900; /* Gold color on hover */
+}
+
+/* Landing Page */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('home.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
     text-align: center;
 }
-h1,h2,h3,h4,h5,h6{  
-    font-family: "Montserrat", "sans-serif";  
-}
 
-p {
-    /* font-family: "Montserrat", "sans-serif";   */
-    color: #8f8f8f;
-}
-/* Heading */
-
-.big-heading{
-    font-family: "Montserrat", "sans-serif";  
-    font-size: 3.5rem;  
-    line-height: 1.5;  
-    font-weight: bolder;
-
-}
-.section-heading{
-    font-size: 3rem;
-    line-height: 1.5;
-    font-weight: bolder;
-}
-
-
-
-#title {
-    background-color: #ff5733;
-    color: white;
-    text-align: left;
-}
-
-
-/* Containers */
-
-.container-fluid{
-    padding: 3% 15% 7%;
-}
-
-/* Sections */
-
-.colored-section {
-    background-color: #ff5733;
-    color: white;
-
-}
-
-.white-section {
-    background-color: #fff;
-
-}
-
-
-
-
-
-/* Navigation Bar */
-
-.navbar {
-    padding: 0 0 4.5rem;
-    width: 100%;
+.profile-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 30px;
-    height: 50px;
     justify-content: center;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text contrast */
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.navbar-brand {
-    font-family: ubuntu;
-    font-size: 2.5rem;
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.intro h1 {
+    font-size: 36px;
     font-weight: bold;
+    color: goldenrod;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #ffffff; /* Cursor-like effect */
+    width: 0;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
 
-.nav-item {
-    padding:0 18px;
-}
-.nav-link {
-    font-size: 1.2rem;
-    font-family: "Montserrat";
-}
-
-/* Download Buttons */
-
-.download-button{
-    margin: 5% 3% 5% 0;
+.intro p {
+    font-size: 18px;
+    color: #ffffff;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
 
-/* Title Image */
-.img{
-    width:60%;
-    transform: rotate(25deg);
-
+/* Profession titles typing effect */
+.typed-professions {
+    display: inline-block;
+    font-size: 22px;
+    color: #ffffff;
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
-/* Feature Section */
-
-#features{
-    background-color: white;
-    padding: 7% 15%;
-    position: relative;
-}
-.feature-title{
-    font-size: 2rem;  
-    line-height: 1;  
-    font-weight: bold;
+.profession {
+    display: inline-block;
+    opacity: 0;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #ffffff;
+    animation: typing 4s steps(30) forwards, blink 0.75s step-end infinite;
 }
 
-.feature-box{
-    padding: 4.5%;
-
-
+.profession:nth-child(1) {
+    animation-delay: 6s; /* Starts after name finishes */
 }
 
-.icon {
-    color:#ef8172;
-    margin-bottom: 1rem;
+.profession:nth-child(2) {
+    animation-delay: 11s; /* Starts after 5s delay */
 }
 
-.icon:hover{
-    color: #ff4c68;
+.profession:nth-child(3) {
+    animation-delay: 16s;
 }
 
-/* Testimonial Section */
-
-#testimonials
-{
-    background-color:#ff5733;
+.profession:nth-child(4) {
+    animation-delay: 21s;
 }
 
-.testimonial-text{
-    font-size: 3rem;
-    line-height: 1.5;
-    font-weight: bolder;
+.profession:nth-child(5) {
+    animation-delay: 26s;
 }
 
-.testimonial-image{
-
-    width:10%;
-    border-radius: 100%;
-    margin: 20px;
-}
-
-.carousel-item{
-    padding: 7% 15%;
-}
-
-#press
-{
-    background-color:#ff5733;
-    padding-bottom: 3%;
-
-}
-.press-logo{
-    width: 15%;
-    margin: 20px 20px 50px;
-}
-
-/* Pricing Section */
-#pricing{
-    padding:100px;
-}
-
-.price-text{
-    font-size: 3rem;
-    line-height: 1.5;
-    font-weight: bolder;
-}
-
-.pricing-column{
-
-    padding: 3% 2%;
-
-}
-
-@media (max-width: 1028px) {
-    #title {
-        text-align: center;
+@keyframes typing {
+    0% {
+        width: 0;
     }
-    .title-image{
-        position:static;
-        transform: rotate(0);
+    100% {
+        width: 100%;
+    }
+}
 
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
 /* Footer */
-#cta{
-
-    /* background-color: #ff5733;
-    color: white; */
-    padding: 7% 15%;
-
+footer {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 0;
+    text-align: center;
 }
 
-.top{
-    /* padding:50px 0 0; */
-    font-weight: bolder;
+
+/* Main content section */
+main {
+    padding-bottom: 60px; /* Space for footer to not overlap content */
 }
 
-#footer{
-    padding: 7% 15%;
+/* Footer Styles */
+footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Makes the footer span the full width */
+    background-color: #003366; /* Background color for the footer */
+    color: white; /* Text color */
+    text-align: center;
+    padding: 10px;
+    z-index: 1000; /* Ensures it stays on top of other elements */
 }
-.logo{
-    margin: 0 10px 10px 10px;
+
+footer ul {
+    list-style: none;
+    padding: 30px;
+    margin:  0;
 }
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer ul li a {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer ul li a:hover {
+    color: #ff9900;
+}
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-pic {
+        margin-bottom: 15px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+}
+
+body {
+    cursor: pointer;
+}
+/* General styles for the portfolio container */
+.portfolio-images {
+    display: grid;
+    grid-template-columns: repeat(no-repeat, minmax(250px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Spacing between containers */
+    padding: 20px;
+}
+
+/* Styling for each image container */
+.portfolio-item {
+    position: relative; /* Allows for absolute positioning of caption */
+    background-color: #fff; /* White background for image container */
+    border-radius: 10px; /* Rounded corners for each container */
+    overflow: hidden; /* Hides parts of the image that overflow */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow around the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect on the container */
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Darker shadow when hovered */
+}
+
+/* Image inside the container */
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Rounded corners for the image */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+/* Hover effect on the image itself */
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Zoom in effect on image */
+}
+
+/* Caption text when hovered */
+.image-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show caption when image container is hovered */
+.portfolio-item:hover .image-caption {
+    opacity: 1; /* Show caption on hover */
+}
+.projects-section {
+    padding: 40px;
+    background-color: #f0f4f8;
+    text-align: center;
+  }
+  
+  .projects-section h2 {
+    font-size: 2em;
+    color: #123456;
+    margin-bottom: 20px;
+  }
+  
+  .projects-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    justify-items: center;
+  }
+  
+  .project-img-container {
+    width: 180px;
+    height: 180px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: white;
+  }
+  
+  .project-img-container:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+

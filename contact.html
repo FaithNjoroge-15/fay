@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Engineer Faith N. Njoroge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+
+            <p>If you have any questions, feedback, or just want to connect, feel free to reach out to me through the form below or through my social media links. I would love to hear from you!</p>
+
+            <div class="contact-form">
+                <form action="submit_form.php" method="POST">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                    
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="rating-section">
+                <h3>Rate My Portfolio</h3>
+                <p>Your feedback is valuable to me! Please rate my portfolio on a scale of 1 to 5:</p>
+                <form>
+                    <label for="rating">Rating (1-5):</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
+                    
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Your feedback here"></textarea>
+
+                    <button type="submit">Submit Rating</button>
+                </form>
+            </div>
+
+            <div class="social-links">
+                <p>Connect with me on social media or via phone:</p>
+                <ul>
+                    <li><a href="https://github.com/FaithNjoroge-15/fay" target="_blank">GitHub</a></li>
+                    <li><a href="https://wa.me/message/3OBC5CDSUYW2F1" target="_blank">WhatsApp</a></li>
+                    <li><a href="tel:+254114123570">Call: +254 114 123 570</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Thank you for visiting my portfolio!</p>
+    </footer>
+</body>
+</html>
